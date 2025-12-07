@@ -1,0 +1,77 @@
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-clock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 400px;
+}
+
+.heading-clock {
+    color: #1a162e;
+    font-size: 3rem;
+    font-weight: 700;
+    padding: 30px 0px 10px 0px;
+    text-align: center;
+}
+
+.on-device {
+    padding: 20px 0;
+}
+
+.on-device__top,
+.off-device__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+.on-device__top-desc,
+.off-device__top-desc {
+    color: #1a162e;
+    font-size: 2.4rem;
+    font-weight: 700;
+    padding: 10px 0px;
+}
+
+.on-device__hour,
+.on-device__minute,
+.off-device__hour,
+.off-device__minute {
+    color: #1a162e;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.on-device__bottom,
+.off-device__bottom {
+    display: flex;
+}
+
+.on-device__select-left,
+.off-device__select-left {
+    margin-right: 40px;
+}
+
+.goHome {
+    display: inline-flex;
+    margin-top: 40px;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #1a162e;
+
+    text-align: center;
+
+    background-color: #77dae6;
+    padding: 10px 30px;
+
+    border-radius: 10px;
+    border: 5px solid #f6d276;
+}

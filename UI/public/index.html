@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Máy lọc không khí</title>
+
+        <!-- Favicon -->
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./assets/favicon/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/favicon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="./assets/favicon/favicon-16x16.png"
+        />
+        <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+
+        <!-- Reset CSS -->
+        <link rel="stylesheet" href="./assets/css/reset.css" />
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+
+        <!-- Styles CSS -->
+        <link rel="stylesheet" href="./assets/css/styles.css" />
+
+        <!-- Responsive CSS -->
+        <link rel="stylesheet" href="./assets/css/responsive.css" />
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="top-bar">
+                    <!-- More -->
+                    <button class="top-bar__more">
+                        <img
+                            src="./assets/icons/more.svg"
+                            alt=""
+                            class="top-bar__more-icon"
+                        />
+                    </button>
+
+                    <!-- Logo -->
+                    <a href="./home.html" class="logo">
+                        <img
+                            src="./assets/icons/logo.svg"
+                            alt="Air Purifier"
+                            class="logo__img logo__home"
+                        />
+                        <h2 class="logo__title logo__home-title">
+                            MÁY LỌC KHÔNG KHÍ
+                        </h2>
+                    </a>
+
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Body -->
+        <main>
+            <!-- Index -->
+            <div class="index">
+                <div class="container">
+                    <p class="index__desc">Thông Tin Chỉ Số</p>
+                    <div class="info">
+                        <div class="info__inner">
+                            <div class="gauge">
+                                <div class="gauge__body">
+                                    <div
+                                        id="gaugeFillAQI"
+                                        class="gauge__fill"
+                                    ></div>
+                                    <div id="aqi" class="gauge__cover">0</div>
+                                </div>
+                                <div class="gauge_text">
+                                    <div
+                                        class="info__desc info__desc-mobile gauge__text1"
+                                    >
+                                        0
+                                    </div>
+                                    <div
+                                        class="info__desc info__desc-mobile gauge__text2"
+                                    >
+                                        500
+                                    </div>
+                                </div>
+                                <p class="info__desc">AQI</p>
+                            </div>
+                        </div>
+
+                        <div class="info__inner">
+                            <div class="gauge">
+                                <div class="gauge__body">
+                                    <div
+                                        id="gaugeFillPM25"
+                                        class="gauge__fill"
+                                    ></div>
+                                    <div id="pm25" class="gauge__cover">0</div>
+                                </div>
+                                <div class="gauge_text">
+                                    <div
+                                        class="info__desc info__desc-mobile gauge__text1"
+                                    >
+                                        0
+                                    </div>
+                                    <div
+                                        class="info__desc info__desc-mobile gauge__text2 gauge__text3"
+                                    >
+                                        60
+                                    </div>
+                                </div>
+                                <p class="info__desc">PM2.5 (µg/m³)</p>
+                            </div>
+                        </div>
+
+                        <div class="info__inner">
+                            <div class="gauge">
+                                <div class="gauge__body">
+                                    <div
+                                        id="gaugeFillPM10"
+                                        class="gauge__fill"
+                                    ></div>
+                                    <div id="pm10" class="gauge__cover">0</div>
+                                </div>
+                                <div class="gauge_text">
+                                    <div
+                                        class="info__desc info__desc-mobile gauge__text1"
+                                    >
+                                        0
+                                    </div>
+                                    <div
+                                        class="info__desc info__desc-mobile gauge__text2"
+                                    >
+                                        260
+                                    </div>
+                                </div>
+                                <p class="info__desc">PM10 (µg/m³)</p>
+                            </div>
+                        </div>
+
+                        <div class="info__inner">
+                            <div class="gauge">
+                                <div class="gauge__body">
+                                    <div
+                                        id="gaugeFillCO2"
+                                        class="gauge__fill"
+                                    ></div>
+                                    <div id="co2" class="gauge__cover">0</div>
+                                </div>
+                                <div class="gauge_text">
+                                    <div
+                                        class="info__desc info__desc-mobile gauge__text1"
+                                    >
+                                        0
+                                    </div>
+                                    <div
+                                        class="info__desc info__desc-mobile gauge__text2 gauge__text5"
+                                    >
+                                        6000
+                                    </div>
+                                </div>
+                                <p class="info__desc">CO2 (ppm)</p>
+                            </div>
+                        </div>
+
+                        <div class="info__inner">
+                            <div class="gauge">
+                                <div class="gauge__body">
+                                    <div
+                                        id="gaugeFillTVOC"
+                                        class="gauge__fill"
+                                    ></div>
+                                    <div id="tvoc" class="gauge__cover">0</div>
+                                </div>
+                                <div class="gauge_text">
+                                    <div
+                                        class="info__desc info__desc-mobile gauge__text1"
+                                    >
+                                        0
+                                    </div>
+                                    <div
+                                        class="info__desc info__desc-mobile gauge__text2 gauge__text5"
+                                    >
+                                        5500
+                                    </div>
+                                </div>
+                                <p class="info__desc">TVOC (ppb)</p>
+                            </div>
+                        </div>
+                        <div class="info__inner">
+                            <div class="gauge">
+                                <div class="gauge__body">
+                                    <div
+                                        id="gaugeFillTemp"
+                                        class="gauge__fill"
+                                    ></div>
+                                    <div id="temp" class="gauge__cover">0</div>
+                                </div>
+                                <div class="gauge_text">
+                                    <div
+                                        class="info__desc info__desc-mobile gauge__text1"
+                                    >
+                                        0
+                                    </div>
+                                    <div
+                                        class="info__desc info__desc-mobile gauge__text2 gauge__text3"
+                                    >
+                                        50
+                                    </div>
+                                </div>
+                                <p class="info__desc">Temp (°C)</p>
+                            </div>
+                        </div>
+
+                        <div class="info__inner">
+                            <div class="gauge">
+                                <div class="gauge__body">
+                                    <div
+                                        id="gaugeFillHumid"
+                                        class="gauge__fill"
+                                    ></div>
+                                    <div id="humid" class="gauge__cover">0</div>
+                                </div>
+                                <div class="gauge_text">
+                                    <div
+                                        class="info__desc info__desc-mobile gauge__text1"
+                                    >
+                                        0
+                                    </div>
+                                    <div
+                                        class="info__desc info__desc-mobile gauge__text2"
+                                    >
+                                        100
+                                    </div>
+                                </div>
+                                <p class="info__desc">Humid (%)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Air Quality Indicator Bar -->
+                    <div class="air-quality-bar">
+                        <div class="air-quality-bar__item air-quality-bar__item--good">
+                            <span class="air-quality-bar__label">GOOD</span>
+                        </div>
+                        <div class="air-quality-bar__item air-quality-bar__item--moderate">
+                            <span class="air-quality-bar__label">MODERATE</span>
+                        </div>
+                        <div class="air-quality-bar__item air-quality-bar__item--sensitive">
+                            <span class="air-quality-bar__label">SENSITIVE</span>
+                        </div>
+                        <div class="air-quality-bar__item air-quality-bar__item--unhealthy">
+                            <span class="air-quality-bar__label">UNHEALTHY</span>
+                        </div>
+                        <div class="air-quality-bar__item air-quality-bar__item--very-unhealthy">
+                            <span class="air-quality-bar__label">VERY UNHEALTHY</span>
+                        </div>
+                        <div class="air-quality-bar__item air-quality-bar__item--hazardous">
+                            <span class="air-quality-bar__label">HAZARDOUS</span>
+                        </div>
+                    </div>
+
+                    <!-- Radio -->
+                    <p class="index__desc">Điều Khiển</p>
+                    <div class="control-top">
+                        <!-- Device Item 1 -->
+                        <div class="control-top control-top-border">
+                            <div class="control-top-device">
+                                <img
+                                    src="./assets/icons/plug-off.svg"
+                                    alt=""
+                                    id="controlTopOnOffImg"
+                                    class="control-top-img"
+                                />
+                                <p class="control-top-desc">On Off</p>
+                            </div>
+                            <div class="button-box">
+                                <div id="controlTopOnOff" class="btn-box"></div>
+                                <button
+                                    type="button"
+                                    id="controlTopOff"
+                                    class="toggle-btn"
+                                >
+                                    Off
+                                </button>
+                                <button
+                                    type="button"
+                                    id="controlTopOn"
+                                    class="toggle-btn"
+                                >
+                                    On
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <div class="form-input">
+                            <input
+                                id="auto"
+                                class="form-input__input"
+                                type="radio"
+                                name="mode"
+                                value="1"
+                            />
+                            <div class="form-input__title">
+                                <img
+                                    class="form-input__img"
+                                    src="./assets/icons/auto.svg"
+                                    alt=""
+                                />
+                                <label class="form-input__label" for="auto">
+                                    Auto
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-input form-input-2">
+                            <input
+                                id="normal"
+                                class="form-input__input"
+                                type="radio"
+                                name="mode"
+                                value="2"
+                            />
+                            <div class="form-input__title">
+                                <img
+                                    class="form-input__img"
+                                    src="./assets/icons/normal.svg"
+                                    alt=""
+                                />
+                                <label class="form-input__label" for="normal">
+                                    Manual
+                                </label>
+                            </div>
+
+                            <div class="control__all">
+                                <div class="box-range">
+                                    <p class="box-range__label">Fan Speed</p>
+                                    <div class="box-range__slider">
+                                        <input
+                                            id="myRange"
+                                            class="box-range__input"
+                                            type="range"
+                                            min="0"
+                                            max="3"
+                                            value="1"
+                                        />
+                                    </div>
+                                    <div
+                                        id="updateRange"
+                                        class="box-range__value"
+                                    >
+                                        0
+                                    </div>
+                                </div>
+                                <div class="device__inner">
+                                    <div class="device">
+                                        <img
+                                            src="./assets/imgs/ion-am.png"
+                                            alt=""
+                                            id=""
+                                            class="device-img"
+                                        />
+                                    </div>
+                                    <div class="button-box">
+                                        <div id="btnOne" class="btn-box"></div>
+                                        <button
+                                            type="button"
+                                            id="btnOff"
+                                            class="toggle-btn"
+                                        >
+                                            Off
+                                        </button>
+                                        <button
+                                            type="button"
+                                            id="btnOn"
+                                            class="toggle-btn"
+                                        >
+                                            On
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Button ion -->
+                </div>
+            </div>
+            <!-- <canvas id="canvas" width="300" height="300"></canvas>
+            <div class="container-2">
+                <div class="circular-progress-2">
+                    <span class="progress-value-2">0%</span>
+                </div>
+
+                <span class="text-2">HTML & CSS</span>
+            </div> -->
+        </main>
+
+        <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-analytics.js"></script>
+        <script src="./JS/main.js"></script>
+        <!-- <script type="module" src="./JS/home-home.js"></script> -->
+    </body>
+</html>
